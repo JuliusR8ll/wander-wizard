@@ -45,13 +45,13 @@ def submit_scenario(state):
     place = data.get("place")
     option = data.get("option")
 
-    prompt = f"you are a travel guide chatbot , Generate a response about  place = {place}, focusing on requirement= {option}. Provide informative and helpful details for a travel itinerary."
+    prompt = f"Imagine you're a seasoned travel writer crafting a captivating guide about {place}, highlighting {option}. Paint a vivid picture with your words, including practical tips, hidden gems, and unique experiences that make this place special"
     completion = palm.generate_text(
     model=model,
     prompt=prompt,
     temperature=0.7,
     # The maximum length of the response
-    max_output_tokens=500,
+    max_output_tokens=750,
     )
     
 
