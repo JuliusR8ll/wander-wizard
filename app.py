@@ -45,13 +45,13 @@ def submit_scenario(state):
     place = data.get("place")
     option = data.get("option")
 
-    prompt = f"Imagine you're a seasoned travel writer crafting a captivating guide about {place}, highlighting {option}. Paint a vivid picture with your words, including practical tips, hidden gems, and unique experiences that make this place special"
+    prompt = f"Imagine you're a seasoned travel writer crafting a captivating guide about {place}, highlighting {option}. Paint a vivid picture with your words, including practical tips, hidden gems, and unique experiences that make this place special.PLease structure output in summarized points."
     completion = palm.generate_text(
     model=model,
     prompt=prompt,
     temperature=0.7,
     # The maximum length of the response
-    max_output_tokens=750,
+    max_output_tokens=650,
     )
     
 
@@ -206,8 +206,8 @@ Ai :  <|{message}|text|>
 <|center|
 
 Made with 💖 by
-[Rahul yadav](https://www.linkedin.com/in/rahul-yadav-50276723b/) ,
-[sahil pradhan](https://www.linkedin.com/in/sahil-pradhan-46a0a31b7/)
+[Rahul Yadav](https://www.linkedin.com/in/rahul-yadav-50276723b/) ,
+[Sahil Pradhan](https://www.linkedin.com/in/sahil-pradhan-46a0a31b7/)
 
 |>
 
